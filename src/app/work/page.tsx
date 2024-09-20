@@ -1,70 +1,68 @@
-import { getPosts } from '@/app/utils';
-import { Flex } from '@/once-ui/components';
-import { Projects } from '@/app/work/components/Projects';
-import { baseURL, person, work } from '../resources';
+import { Flex, Heading, Text } from '@/once-ui/components'
+import { person, about, social, baseURL } from '@/app/resources'
 
-export function generateMetadata() {
-	const title = work.title;
-	const description = work.description;
-	const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
 
-	return {
-		title,
-		description,
-		openGraph: {
-			title,
-			description,
-			type: 'website',
-			url: `https://${baseURL}/work`,
-			images: [
-				{
-					url: ogImage,
-					alt: title,
-				},
-			],
-		},
-		twitter: {
-			card: 'summary_large_image',
-			title,
-			description,
-			images: [ogImage],
-		},
-	};
-}
+export default function Work () {
 
-export default function Work() {
-    let allProjects = getPosts(['src', 'app', 'work', 'projects']);
+  return (
+    <Flex fillWidth maxWidth='m' direction='column'>
 
-    return (
-        <Flex
-			fillWidth maxWidth="m"
-			direction="column">
-            <script
-                type="application/ld+json"
-                suppressHydrationWarning
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        '@context': 'https://schema.org',
-                        '@type': 'CollectionPage',
-                        headline: work.title,
-                        description: work.description,
-                        url: `https://${baseURL}/projects`,
-                        image: `${baseURL}/og?title=Design%20Projects`,
-                        author: {
-                            '@type': 'Person',
-                            name: person.name,
-                        },
-                        hasPart: allProjects.map(project => ({
-                            '@type': 'CreativeWork',
-                            headline: project.metadata.title,
-                            description: project.metadata.summary,
-                            url: `https://${baseURL}/projects/${project.slug}`,
-                            image: `${baseURL}/${project.metadata.image}`,
-                        })),
-                    }),
-                }}
-            />
-            <Projects/>
-        </Flex>
-    );
+      {about.work.display && (
+        <>
+          <Heading
+            as='h2'
+            id={about.work.title}
+            variant='display-strong-s'
+            marginBottom='m'
+          >
+            {about.work.title}
+          </Heading>
+          <Flex direction='column' fillWidth gap='l' marginBottom='40'>
+            {about.work.experiences.map((experience, index) => (
+              <Flex
+                key={`${experience.company}-${experience.role}-${index}`}
+                fillWidth
+                direction='column'
+              >
+                <Flex
+                  fillWidth
+                  justifyContent='space-between'
+                  alignItems='flex-end'
+                  marginBottom='4'
+                >
+                  <Text id={experience.company} variant='heading-strong-l'>
+                    {experience.company}
+                  </Text>
+                  <Text
+                    variant='heading-default-xs'
+                    onBackground='neutral-weak'
+                  >
+                    {experience.timeframe.start} - {experience.timeframe.end}
+                  </Text>
+                </Flex>
+                <Text
+                  variant='body-default-s'
+                  onBackground='brand-weak'
+                  marginBottom='xs'
+                >
+                  {experience.role}
+                </Text>
+                <Flex as='ul' direction='column'>
+                  {experience.achievements.map((achievement, index) => (
+                    <Text
+                      as='li'
+                      variant='label-default-m'
+                      key={`${experience.company}-${index}`}
+                    >
+                      {achievement}
+                    </Text>
+                  ))}
+                </Flex>
+              </Flex>
+            ))}
+          </Flex>
+        </>
+      )}
+    </Flex>
+  )
 }

@@ -17,6 +17,7 @@ import {
   person,
 } from '@/app/resources'
 import { MoreBtn } from './components/MoreBtn'
+import Work from './work/page'
 
 export function generateMetadata () {
   const title = home.title
@@ -149,14 +150,6 @@ export default function Home () {
               size='m'
             >
               <Flex gap='8' alignItems='center'>
-                {/* {about.avatar.display && (
-                  <Avatar
-                    style={{ marginLeft: '-0.75rem', marginRight: '0.25rem' }}
-                    src={person.avatar}
-                    size='m'
-                  />
-                )} */}
-
                 resume
               </Flex>
             </Button>
@@ -202,7 +195,8 @@ export default function Home () {
                 </RevealFx> */}
       </Flex>
       <RevealFx translateY='16' delay={0.6}>
-        <Projects range={[1, 1]} />
+        <Work />
+        {/* <Projects range={[1, 1]} /> */}
       </RevealFx>
     </Flex>
   )
