@@ -1,4 +1,5 @@
-import { InlineCode } from "@/once-ui/components";
+import { InlineCode, Text } from "@/once-ui/components";
+import { MoreBtn } from "../components/MoreBtn";
 
 const person = {
     firstName: 'Mahendra',
@@ -7,7 +8,7 @@ const person = {
         return `${this.firstName} ${this.lastName}`;
     },
     role:      'Frontend Engineer, Fullstack Engineer, Freelancer',
-    avatar:    '/images/avatar.webp',
+    avatar:    '/images/avatar2.webp',
     timeZone:  'Asia/Kolkata',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
     languages: ['English', 'Hindi']  // optional: Leave the array empty if you don't want to display languages
 }
@@ -49,7 +50,10 @@ const home = {
     title: `${person.name}'s Portfolio`,
     description: `Portfolio website showcasing my work as a ${person.role}`,
     headline: <>Engineer, Freelancer, Builder</>,
-    subline: <>I'm Mahendra Dewangan, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive<br/> user experiences. After hours, I build my own projects.</>
+    sublineOne: <>Hi, I’m Mahendra Dewangan, Frontend developer from India.
+    I recently graduated with a Bachelors in Computer Science, specializing in frontend development. I’ve dabbled in both frontend and backend <Text onBackground="danger-weak">(because, why not complicate life a little more?)</Text></>,
+    sublineTwo:<>I’m passionate about building cool things and creating projects that push the boundaries of tech <Text onBackground="danger-weak">(or break them, depending on the day)</Text>.</>,
+    sublineThree:<> In my free time <Text onBackground="danger-weak"> (which is practically a myth)</Text>, I enjoy working on my side projects. After hours, I like building my own ideas into reality <Text onBackground="danger-weak">because, you know, who needs sleep?</Text> Oh, and I also like to do drawing and painting <Text onBackground="danger-weak"> (on those rare occasions when I actually have time to breathe!)</Text><MoreBtn  /></>
 }
 
 const about = {
@@ -75,6 +79,39 @@ const about = {
     work: {
         display: true, // set to false to hide this section
         title: 'Work Experience',
+        experiences: [
+            {
+                company: 'FLY',
+                timeframe: '2022 - Present',
+                role: 'Senior Design Engineer',
+                achievements: [
+                    <>Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.</>,
+                    <>Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster.</>
+                ],
+                images: [ // optional: leave the array empty if you don't want to display images
+                    {
+                        src: '/images/projects/project-01/cover-01.jpg',
+                        alt: 'Once UI Project',
+                        width: 16,
+                        height: 9
+                    }
+                ]
+            },
+            {
+                company: 'Creativ3',
+                timeframe: '2018 - 2022',
+                role: 'Lead Designer',
+                achievements: [
+                    <>Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.</>,
+                    <>Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue.</>
+                ],
+                images: [ ]
+            }
+        ]
+    },
+    project: {
+        display: true, // set to false to hide this section
+        title: 'Projects',
         experiences: [
             {
                 company: 'FLY',
