@@ -58,7 +58,7 @@ const structure = [
 export default function About() {
     return (
         <Flex
-            fillWidth maxWidth="m"
+            fillWidth maxWidth="s"
             direction="column">
             <script
                 type="application/ld+json"
@@ -191,14 +191,14 @@ export default function About() {
                         )}
                     </Flex>
 
-                    { about.intro.display && (
+                    {/* { about.intro.display && (
                         <Flex
                             direction="column"
                             textVariant="body-default-l"
                             fillWidth gap="m" marginBottom="xl">
                             {about.intro.description}
                         </Flex>
-                    )}
+                    )} */}
 
                     { about.work.display && (
                         <>
@@ -311,7 +311,7 @@ export default function About() {
                         </>
                     )}
 
-                    { about.technical.display && (
+                    { about.project.display && (
                         <>
                             <Heading
                                 as="h2"
@@ -322,39 +322,39 @@ export default function About() {
                             <Flex
                                 direction="column"
                                 fillWidth gap="l">
-                                {about.technical.skills.map((skill, index) => (
+                                {about.project.mainProjects.map((mainProject, index) => (
                                     <Flex
-                                        key={`${skill}-${index}`}
+                                        key={`${mainProject}-${index}`}
                                         fillWidth gap="4"
                                         direction="column">
                                         <Text
                                             variant="heading-strong-l">
-                                            {skill.title}
+                                            {mainProject.name}
                                         </Text>
                                         <Text
                                             variant="body-default-m"
                                             onBackground="neutral-weak">
-                                            {skill.description}
+                                            {mainProject.description}
                                         </Text>
-                                        {skill.images.length > 0 && (
+                                        {mainProject.image  && (
                                             <Flex
                                                 fillWidth paddingTop="m" gap="12"
                                                 wrap>
-                                                {skill.images.map((image, index) => (
+                                                {/* {skill.images.map((image, index) => ( */}
                                                     <Flex
                                                         key={index}
                                                         border="neutral-medium"
                                                         borderStyle="solid-1"
                                                         radius="m"
-                                                        minWidth={image.width} height={image.height}>
+                                                        minWidth={mainProject.image.width} height={mainProject.image.height}>
                                                         <SmartImage
                                                             enlarge
                                                             radius="m"
-                                                            sizes={image.width.toString()}
-                                                            alt={image.alt}
-                                                            src={image.src}/>
+                                                            sizes={mainProject.image.toString()}
+                                                            alt={mainProject.image.alt}
+                                                            src={mainProject.image.src}/>
                                                     </Flex>
-                                                ))}
+                                                {/* ))} */}
                                             </Flex>
                                         )}
                                     </Flex>

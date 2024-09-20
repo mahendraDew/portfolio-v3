@@ -8,7 +8,6 @@ import {
   Avatar,
   RevealFx, Icon, IconButton, SmartImage, SmartLink, Tag,
 } from '@/once-ui/components'
-import { Projects } from '@/app/work/components/Projects'
 
 import {
   about,
@@ -17,7 +16,8 @@ import {
   person,
 } from '@/app/resources'
 import { MoreBtn } from './components/MoreBtn'
-import Work from './work/page'
+import Work from './work/work'
+import { Projects } from './project/Projects'
 
 export function generateMetadata () {
   const title = home.title
@@ -100,14 +100,7 @@ export default function Home () {
              <Heading  wrap='balance' variant='label-strong-l' onSolid='neutral-weak' style={{color: '#959595'}}>
               {home.headline}
             </Heading>
-             {/* <Text
-              wrap='balance'
-              onBackground='neutral-weak'
-              variant='body-default-xl'
-              size='m'
-                  >
-              {home.headline}
-            </Text> */}
+            
           </RevealFx>
           <RevealFx translateY='8' delay={0.2}>
             <Text
@@ -155,17 +148,7 @@ export default function Home () {
             </Button>
           </RevealFx>
         </Flex>
-        {/* { about.avatar.display && (
-                  <RevealFx translateY='4'>
-                    <Flex
-                        minWidth="160" paddingX="l" paddingBottom="xl" gap="m"
-                        flex={3} direction="column" alignItems="center">
-                        <Avatar
-                            src={person.avatar}
-                            size="xl"  />
-                    </Flex>
-                  </RevealFx>
-                  )} */}
+        
         <RevealFx translateY='4' style={{width: '50%'}}>
           <Flex
              paddingBottom="xl" gap="m" paddingLeft='l'
@@ -197,6 +180,10 @@ export default function Home () {
       <RevealFx translateY='16' delay={0.6}>
         <Work />
         {/* <Projects range={[1, 1]} /> */}
+      </RevealFx>
+      <RevealFx translateY='16' delay={0.6}>
+        {/* <Work /> */}
+        <Projects />
       </RevealFx>
     </Flex>
   )
