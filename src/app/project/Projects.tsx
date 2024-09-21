@@ -1,10 +1,11 @@
 "use client"
 // import { getPosts } from '@/app/utils'
-import { Flex, Heading, IconButton, SmartImage, Text } from '@/once-ui/components'
+import { Button, Flex, Heading, IconButton, SmartImage, Text } from '@/once-ui/components'
 import { person, about, social, baseURL } from '@/app/resources'
 import { useState } from 'react';
 
 import { ProjectCard } from '@/app/components'
+import { More } from '../components/More';
 
 interface ProjectsProps {
   range?: [number, number?]
@@ -46,6 +47,7 @@ export function Projects ({ range }: ProjectsProps) {
                 style={{
                     backgroundColor: hoveredProjectIndex === index ? '#5a5a5a50' : '#5a5a5a24',
                     transition: 'background-color 0.3s ease',
+                    cursor: 'pointer'
                   }}
                   onMouseEnter={() => setHoveredProjectIndex(index)}
                   onMouseLeave={() => setHoveredProjectIndex(null)}
@@ -81,10 +83,20 @@ export function Projects ({ range }: ProjectsProps) {
                     alignItems='center'
                     marginBottom='4'
                     paddingLeft='s'
+                   
                     >
-                        <Text id={mainProject.name} variant='heading-strong-l'>
-                            {mainProject.name}
-                        </Text>
+                        <a
+                        href={mainProject.links.ext || mainProject.links.github}
+                        style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }} target='_blank'
+                        >
+                            <Text id={mainProject.name} variant='heading-strong-l' 
+                             
+                            onBackground={hoveredProjectIndex === index ? 'neutral-strong' : 'neutral-weak'}
+                            onMouseEnter={() => setHoveredProjectIndex(index)}
+                            onMouseLeave={() => setHoveredProjectIndex(null)} >
+                                {mainProject.name}
+                            </Text>
+                        </a>
                         <Flex  gap="8" paddingRight='s'>
                             {/* external  link */}
                             {mainProject.links.ext && (
@@ -113,6 +125,9 @@ export function Projects ({ range }: ProjectsProps) {
                   <Text
                     as='li'
                     variant='label-default-m'
+                    onBackground={hoveredProjectIndex === index ? 'neutral-strong' : 'neutral-weak'}
+                    onMouseEnter={() => setHoveredProjectIndex(index)}
+                    onMouseLeave={() => setHoveredProjectIndex(null)} 
                     key={`${mainProject.name}-${index}`}
                   >
                     {mainProject.oneliner}
@@ -121,6 +136,15 @@ export function Projects ({ range }: ProjectsProps) {
               </Flex>
             ))}
           </Flex>
+          
+          <Button
+           href='/archive'
+           data-border='rounded'
+           variant="tertiary"
+           size="m"
+           label="View Archive"
+           suffixIcon="chevronRight"
+           />
         </>
       )}
     </Flex>
