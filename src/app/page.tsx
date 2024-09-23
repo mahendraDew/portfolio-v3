@@ -18,6 +18,7 @@ import {
 import { MoreBtn } from './components/MoreBtn'
 import Work from './work/work'
 import { Projects } from './project/Projects'
+import { ArchiveProject } from './archive/components/ArchiveProject'
 
 export function generateMetadata () {
   const title = home.title
@@ -181,9 +182,13 @@ export default function Home () {
         <Work />
         {/* <Projects range={[1, 1]} /> */}
       </RevealFx>
-      <RevealFx translateY='16' delay={0.6}>
+      <RevealFx translateY='16' delay={0.6} >
         {/* <Work /> */}
-        <Projects />
+        need to add projects here
+        <Flex>
+          <Projects />
+        </Flex>
+        {/* <ArchiveProject /> */}
       </RevealFx>
     </Flex>
   )

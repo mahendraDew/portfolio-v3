@@ -1,16 +1,25 @@
+
 import React from 'react';
-import {Accordion, AccordionItem} from "@nextui-org/react";
+import { ArchiveProject } from './components/ArchiveProject';
+import { Flex, Heading } from '@/once-ui/components';
 
-export default function Archive () {
-    const defaultContent =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 
-    return (
-        <>
-            <div>
-                <h1 className='text-4xl text-red-600'>shipping soon...</h1>
-            </div>
-            
-      </>
-    );
+export default function Archive() {
+  
+  return (
+    <> 
+      <Flex width="s" direction='column' justifyContent='center' alignItems='center'>
+        <Heading
+            as='h2'
+            id="needs to  be changed"
+            variant='display-strong-s'
+            marginBottom='m'
+          >
+            {/* {about.work.title} */}
+            Archive Page (needs to be changed)
+          </Heading>
+        <ArchiveProject />
+      </Flex>
+    </>
+  );
 };

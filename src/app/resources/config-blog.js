@@ -3,9 +3,8 @@ const baseURL = 'nextjs-portfolio.up.railway.app'
 const routes = {
     '/':        true,
     '/about':   true,
-    '/work':    false,
-    '/blog':    true,
-    '/gallery': true,
+    '/blog':   true,
+    '/archive':    true
 }
 
 // Enable password protection on selected routes

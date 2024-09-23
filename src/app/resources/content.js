@@ -166,6 +166,17 @@ const about = {
             connect, and code together!
           </>
         ],
+        tags: [
+          'nextjs',
+          'js',
+          'typescript',
+          'tailwind',
+          'nodejs',
+          'docker',
+          'Drizzle',
+          'PostgreSQL',
+          'OAuth'
+        ],
         image: {
           src: '/images/projects/project-01/cover-01.jpg',
           alt: 'devspace img',
@@ -189,6 +200,16 @@ const about = {
             and Moodify will curate a personalized playlist to match your
             emotional state, enhancing your music experience.
           </>
+        ],
+        tags: [
+          'HTML/CSS',
+          'Javascript',
+          'Python',
+          'Flask',
+          'OpenCV',
+          'Haarcascade classifier',
+          'FER 2013',
+          'Firebase'
         ],
         image: {
           src: '/images/projects/project-01/cover-01.jpg',
@@ -214,6 +235,16 @@ const about = {
             for web applications.
           </>
         ],
+        tags: [
+          'Javascript',
+          'Typescript',
+          'Next.js',
+          'React.js',
+          'Node.js',
+          'Express',
+          'Redis DB',
+          'Azure Containers',
+        ],
         image: {
           src: '/images/projects/project-01/cover-01.jpg',
           alt: 'moodify img',
@@ -235,6 +266,14 @@ const about = {
             Enjoy high-quality audio, create custom playlists, and discover new
             music based on your with an intuitive interface and robust features.
           </>
+        ],
+        tags: [
+          'Javascript',
+          'Reactjs',
+          'APIs',
+          'RapidAPI',
+          'Axios',
+          'Redux',
         ],
         image: {
           src: '/images/projects/project-01/cover-01.jpg',
@@ -258,6 +297,10 @@ const about = {
             face images, training a face recognition model, and performing
             recognition tasks.
           </>
+        ],
+        tags: [
+          'Python',
+          'OpenCV','Numpy'
         ],
         image: {
           src: '/images/projects/project-01/cover-01.jpg',
@@ -283,7 +326,17 @@ const about = {
             Drag-and-Drop feature, able to select and drag images, effortlessly
             rearranging them within the gallery. This project consumes data from
             the unSplash API.
-          </>
+          </>,
+          <> username: user@example.com, password: 1Password</>
+        ],
+        tags: [
+          
+          'Javascript',
+          'Reactjs',
+          'TailwindCSS',
+          'Nodejs',
+          'FirebaseAUTH',
+          'unSplash',
         ],
         image: {
           src: '/images/projects/project-01/cover-01.jpg',
@@ -292,20 +345,24 @@ const about = {
           height: 3
         },
         links: {
-          ext: '',
+          ext: 'https://hng-stage-three-image-gallery.vercel.app/',
           github: 'https://github.com/mahendraDew/HNG-stage-three'
         }
       },
       {
         name: 'React DallE Clone',
         timeframe: 'June 2024 - Present',
-        oneliner: 'Simple face recognition system',
+        oneliner: 'An image generator app using',
         description: [
           <>
             An image generator app using ReactJS, inspired by DALL-E, to create
             unique images based on text prompts. Explore endless creative
             possibilities with advanced AI-driven image generation.
           </>
+        ],
+        tags: [
+          'Javascript',
+          'Nodejs','Reactjs','dallE API'
         ],
         image: {
           src: '/images/projects/project-01/cover-01.jpg',
@@ -329,6 +386,9 @@ const about = {
             one of them wins or the board is full.
           </>
         ],
+        tags: [
+          'Java','IntelliJ Idea'
+        ],
         image: {
           src: '/images/projects/project-01/cover-01.jpg',
           alt: 'tic tac toe game img',
@@ -351,6 +411,9 @@ const about = {
             understanding directly within your browser.
           </>
         ],
+        tags: [
+          'HTML','CSS','Javascript'
+        ],
         image: {
           src: '/images/projects/project-01/cover-01.jpg',
           alt: 'tic tac toe game img',
@@ -359,7 +422,8 @@ const about = {
         },
         links: {
           ext: '',
-          github: 'https://github.com/mahendraDew/Dictionary_App_Chrome_extension'
+          github:
+            'https://github.com/mahendraDew/Dictionary_App_Chrome_extension'
         }
       }
     ],
@@ -420,7 +484,8 @@ const about = {
           'This Python project idea aims to create a fun project that allows you to assess and even enhance your typing speed.',
         links: {
           ext: '',
-          github:'https://github.com/mahendraDew/Python-Projects/tree/main/Typing%20Speed%20Test'
+          github:
+            'https://github.com/mahendraDew/Python-Projects/tree/main/Typing%20Speed%20Test'
         }
       },
       {
@@ -429,7 +494,8 @@ const about = {
         oneliner: 'Morse Code Translator.',
         links: {
           ext: '',
-          github: 'https://github.com/mahendraDew/Web-Dev-Projects/tree/master/Morse%20Code%20Translator'
+          github:
+            'https://github.com/mahendraDew/Web-Dev-Projects/tree/master/Morse%20Code%20Translator'
         }
       }
     ]
