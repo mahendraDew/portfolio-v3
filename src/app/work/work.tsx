@@ -15,7 +15,7 @@ export default function Work () {
             variant='display-strong-s'
             marginBottom='m'
           >
-            {about.work.title}
+            {about.work.title.toLowerCase()}
           </Heading>
           <Flex direction='column' fillWidth gap='l' marginBottom='40'>
             {about.work.experiences.map((experience, index) => (
@@ -51,7 +51,8 @@ export default function Work () {
                   {experience.achievements.map((achievement, index) => (
                     <Text
                       as='li'
-                      variant='label-default-m'
+                      onBackground='neutral-weak'
+              variant='label-default-m'
                       key={`${experience.company}-${index}`}
                     >
                       {achievement}

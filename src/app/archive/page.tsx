@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { ArchiveProject } from './components/ArchiveProject';
-import { Flex, Heading } from '@/once-ui/components';
+import { Flex, Heading, IconButton } from '@/once-ui/components';
 
 
 export default function Archive() {
@@ -9,6 +9,14 @@ export default function Archive() {
   return (
     <> 
       <Flex width="s" direction='column' justifyContent='center' alignItems='center'>
+        {/* <IconButton
+          href="/"
+          icon="HiMiniArrowLeft"
+          size="l"
+          tooltip="Tooltip"
+          tooltipPosition="top"
+          variant="tertiary"
+        /> */}
         <Heading
             as='h2'
             id="needs to  be changed"
@@ -16,7 +24,7 @@ export default function Archive() {
             marginBottom='m'
           >
             {/* {about.work.title} */}
-            Archive Page (needs to be changed)
+            archive projects
           </Heading>
         <ArchiveProject />
       </Flex>

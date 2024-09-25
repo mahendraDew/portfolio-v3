@@ -51,14 +51,14 @@ const social = [
 
 const home = {
   label: 'home',
-  title: `${person.name}'s Portfolio`,
+  title: `${person.name}`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
   headline: <>Engineer, Freelancer, Builder</>,
   sublineOne: (
     <>
-      Hi, I’m Mahendra Dewangan, Frontend developer from India. I recently
-      graduated with a Bachelors in Computer Science, specializing in frontend
-      development. I’ve dabbled in both frontend and backend{' '}
+      hi, i’m Mahendra Dewangan, frontend developer from india. i recently
+      graduated with a bachelors in computer science, specializing in frontend
+      development. i’ve dabbled in both frontend and backend{' '}
       <Text onBackground='danger-weak'>
         (because, why not complicate life a little more?)
       </Text>
@@ -66,7 +66,7 @@ const home = {
   ),
   sublineTwo: (
     <>
-      I’m passionate about building cool things and creating projects that push
+      i’m passionate about building cool things and creating projects that push
       the boundaries of tech{' '}
       <Text onBackground='danger-weak'>
         (or break them, depending on the day)
@@ -77,18 +77,20 @@ const home = {
   sublineThree: (
     <>
       {' '}
-      In my free time{' '}
+      in my free time{' '}
       <Text onBackground='danger-weak'> (which is practically a myth)</Text>, I
-      enjoy working on my side projects. After hours, I like building my own
+      enjoy working on my side projects. after hours, i like building my own
       ideas into reality{' '}
       <Text onBackground='danger-weak'>
         because, you know, who needs sleep?
       </Text>{' '}
-      Oh, and I also like to do drawing and painting{' '}
+      oh, and i also like to do drawing and painting{' '}
       <Text onBackground='danger-weak'>
         {' '}
         (on those rare occasions when I actually have time to breathe!)
       </Text>
+      .{' '}
+      exploring web3 as of now{':|'}{' '}
       <MoreBtn />
     </>
   )
@@ -96,7 +98,7 @@ const home = {
 
 const about = {
   label: 'about',
-  title: 'About me',
+  title: 'about me',
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
   tableOfContent: {
     display: true,
@@ -111,39 +113,39 @@ const about = {
   },
   intro: {
     display: true,
-    title: 'Introduction'
+    title: 'introduction'
     // description: <>Mahendra is a Indian engineer with a passion for transforming complex challenges into simple, elegant design solutions. Her work spans digital interfaces, interactive experiences, and the convergence of design and technology.</>
   },
   work: {
     display: true, // set to false to hide this section
-    title: 'Work/Intern',
+    title: 'work/intern',
     experiences: [
       {
         company: 'HNGx',
         timeframe: {
-          start: 'Sept 2023',
-          end: 'Nov 2023'
+          start: 'sept 2023',
+          end: 'nov 2023'
         },
-        role: 'Frontend Engineer',
+        role: 'frontend engineer',
         achievements: [
           <>
-            Implemented a screen recording feature using JavaScript and browser
-            APIs to capture screen/tab/window activity. Utilized Blob objects to
-            chunk and send recorded video data to the backend via API endpoints.
+            implemented a screen recording feature using javaScript and browser
+            api to capture screen/tab/window activity. utilized blob objects to
+            chunk and send recorded video data to the backend via api endpoints.
           </>,
           <>
-            Fetched and displayed video and transcript data from the backend,
+            fetched and displayed video and transcript data from the backend,
             synchronizing the transcript with the video playback to highlight
             the current word as the video progresses.
           </>,
           <>
-            This project enhanced user experience by providing a seamless screen
+            this project enhanced user experience by providing a seamless screen
             recording and playback feature, improving the overall functionality
             and usability of the web application.
           </>,
           <>
-            Skills and Technologies: Javascript/Typescript, React.js, Nextjs,
-            Node.js, API, TailwindCSS, ChromeAPIs.
+            skills and technologies: javascript/typescript, react.js, nextjs,
+            node.js, api, tailwindcss, chromeapis.
           </>
         ]
       }
@@ -151,13 +153,13 @@ const about = {
   },
   project: {
     display: true, // set to false to hide this section
-    title: 'Projects',
+    title: 'projects',
     mainProjects: [
       {
         name: 'devspace',
-        timeframe: 'June 2024 - Present',
+        timeframe: 'june 2024 - present',
         oneliner:
-          'A site to help developers find other people to pair program with.',
+          'a site to help developers find other people to pair program with.',
         description: [
           <>
             a pair programming platform where you can find fellow developers,
@@ -173,46 +175,46 @@ const about = {
           'tailwind',
           'nodejs',
           'docker',
-          'Drizzle',
-          'PostgreSQL',
-          'OAuth'
+          'drizzle',
+          'postgreSQL',
+          'oauth'
         ],
         image: {
-          src: '/images/projects/project-01/cover-01.jpg',
+          src: '/images/projects/devspace.png',
           alt: 'devspace img',
           width: 5,
           height: 3
         },
         links: {
           ext: 'https://devspace-prod.vercel.app/',
-          github: 'https://github.com/mahendrdew/devspace'
+          github: 'https://github.com/mahendraDew/devspace'
         }
       },
       {
-        name: 'Moodify',
-        timeframe: 'June 2024 - Present',
+        name: 'moodify',
+        timeframe: 'june 2024 - present',
         oneliner:
-          'Music recommendation system(web app) based on facial expression(emotion)',
+          'music recommendation system(web app) based on facial expression(emotion)',
         description: [
           <>
-            Moodify is a music recommendation web app that uses facial emotion
-            recognition to suggest songs. Capture your mood through the camera,
+            moodify is a music recommendation web app that uses facial emotion
+            recognition to suggest songs. capture your mood through the camera,
             and Moodify will curate a personalized playlist to match your
             emotional state, enhancing your music experience.
           </>
         ],
         tags: [
-          'HTML/CSS',
-          'Javascript',
-          'Python',
-          'Flask',
-          'OpenCV',
-          'Haarcascade classifier',
-          'FER 2013',
-          'Firebase'
+          'html/css',
+          'javascript',
+          'python',
+          'flask',
+          'openCV',
+          'haarcascade classifier',
+          'fer 2013',
+          'firebase'
         ],
         image: {
-          src: '/images/projects/project-01/cover-01.jpg',
+          src: '/images/projects/moodify.png',
           alt: 'moodify img',
           width: 5,
           height: 3
@@ -223,30 +225,30 @@ const about = {
         }
       },
       {
-        name: 'DeployCell - Vercel Clone',
-        timeframe: 'June 2024 - Present',
+        name: 'deploycell - vercel clone',
+        timeframe: 'june 2024 - present',
         oneliner:
-          'A plateform to streamline the deployment of React application.',
+          'a plateform to streamline the deployment of react application.',
         description: [
           <>
-            Developed DeployCell, a plateform to streamline the deployment of
-            React applications. DeployCell offers an efficient and automated
+            developed deploycell, a plateform to streamline the deployment of
+            react applications. deploycell offers an efficient and automated
             deployment process, ensuring optimal performance and compatibility
             for web applications.
           </>
         ],
         tags: [
-          'Javascript',
-          'Typescript',
-          'Next.js',
-          'React.js',
-          'Node.js',
-          'Express',
-          'Redis DB',
-          'Azure Containers',
+          'javascript',
+          'typescript',
+          'next.js',
+          'react.js',
+          'node.js',
+          'express',
+          'redis DB',
+          'azure Containers',
         ],
         image: {
-          src: '/images/projects/project-01/cover-01.jpg',
+          src: '/images/projects/deploycell.png',
           alt: 'moodify img',
           width: 5,
           height: 3
@@ -257,26 +259,26 @@ const about = {
         }
       },
       {
-        name: 'Recify - Spotify Clone',
-        timeframe: 'June 2024 - Present',
-        oneliner: 'Music screaming platform using Spotify API',
+        name: 'recify - spotify clone',
+        timeframe: 'june 2024 - present',
+        oneliner: 'music screaming platform using spotify api',
         description: [
           <>
-            Recify is a Spotify clone web app offering seamless music streaming.
-            Enjoy high-quality audio, create custom playlists, and discover new
+            recify is a spotify clone web app offering seamless music streaming.
+            enjoy high-quality audio, create custom playlists, and discover new
             music based on your with an intuitive interface and robust features.
           </>
         ],
         tags: [
-          'Javascript',
-          'Reactjs',
-          'APIs',
-          'RapidAPI',
-          'Axios',
-          'Redux',
+          'javascript',
+          'reactjs',
+          'apis',
+          'rapidapi',
+          'axios',
+          'redux',
         ],
         image: {
-          src: '/images/projects/project-01/cover-01.jpg',
+          src: '/images/projects/recify.png',
           alt: 'moodify img',
           width: 5,
           height: 3
@@ -287,23 +289,23 @@ const about = {
         }
       },
       {
-        name: 'Face Recognition System using OpenCV',
-        timeframe: 'June 2024 - Present',
-        oneliner: 'Simple face recognition system',
+        name: 'face recognition system using opencv',
+        timeframe: 'june 2024 - present',
+        oneliner: 'simple face recognition system',
         description: [
           <>
-            This is a simple face recognition system implemented using the
-            OpenCV library in Python. The project involves capturing and saving
+            this is a simple face recognition system implemented using the
+            opencv library in python. the project involves capturing and saving
             face images, training a face recognition model, and performing
             recognition tasks.
           </>
         ],
         tags: [
-          'Python',
-          'OpenCV','Numpy'
+          'python',
+          'OpenCV','numpy'
         ],
         image: {
-          src: '/images/projects/project-01/cover-01.jpg',
+          src: '/images/projects/project-01/cover.jpg',
           alt: 'face recognition img',
           width: 5,
           height: 3
@@ -314,32 +316,32 @@ const about = {
         }
       },
       {
-        name: 'Image Gallery',
-        timeframe: 'June 2024 - Present',
+        name: 'image gallery',
+        timeframe: 'june 2024 - present',
         oneliner:
-          'Responsive image gallery that showcases a collection of images in a visually appealing way',
+          'responsive image gallery that showcases a collection of images in a visually appealing way',
         description: [
           <>
-            A fully functional and responsive image gallery that showcases a
-            collection of images in a visually appealing way. Ability to Login
-            to the gallery page. Authenticated users are able to use the
-            Drag-and-Drop feature, able to select and drag images, effortlessly
-            rearranging them within the gallery. This project consumes data from
-            the unSplash API.
+            a fully functional and responsive image gallery that showcases a
+            collection of images in a visually appealing way. ability to login
+            to the gallery page. authenticated users are able to use the
+            drag-and-drop feature, able to select and drag images, effortlessly
+            rearranging them within the gallery. this project consumes data from
+            the unsplash api.
           </>,
           <> username: user@example.com, password: 1Password</>
         ],
         tags: [
           
-          'Javascript',
-          'Reactjs',
-          'TailwindCSS',
+          'javascript',
+          'reactjs',
+          'tailwindcss',
           'Nodejs',
-          'FirebaseAUTH',
-          'unSplash',
+          'firebase-auth',
+          'unsplash',
         ],
         image: {
-          src: '/images/projects/project-01/cover-01.jpg',
+          src: '/images/projects/image-gallery.png',
           alt: 'image gallery img',
           width: 5,
           height: 3
@@ -350,23 +352,23 @@ const about = {
         }
       },
       {
-        name: 'React DallE Clone',
-        timeframe: 'June 2024 - Present',
-        oneliner: 'An image generator app using',
+        name: 'react dalle clone',
+        timeframe: 'june 2024 - present',
+        oneliner: 'an image generator app using',
         description: [
           <>
-            An image generator app using ReactJS, inspired by DALL-E, to create
+            an image generator app using reactJS, inspired by dall-e, to create
             unique images based on text prompts. Explore endless creative
-            possibilities with advanced AI-driven image generation.
+            possibilities with advanced ai-driven image generation.
           </>
         ],
         tags: [
-          'Javascript',
-          'Nodejs','Reactjs','dallE API'
+          'javascript',
+          'Nodejs','reactjs','dalle api'
         ],
         image: {
-          src: '/images/projects/project-01/cover-01.jpg',
-          alt: 'React dalle clone img',
+          src: '/images/projects/dalle-clone.png',
+          alt: 'react dalle clone img',
           width: 5,
           height: 3
         },
@@ -376,21 +378,21 @@ const about = {
         }
       },
       {
-        name: 'Tic Tac Toe - Java CLI App',
-        timeframe: 'June 2024 - Present',
-        oneliner: 'Console-based Tic-Tac-Toe game',
+        name: 'tic tac toe - java cli app',
+        timeframe: 'june 2024 - present',
+        oneliner: 'console-based tic-tac-toe game',
         description: [
           <>
-            This is a simple console-based Tic Tac Toe game implemented in Java.
-            The game allows two players to take turns entering their moves until
+            this is a simple console-based Tic Tac Toe game implemented in Java.
+            the game allows two players to take turns entering their moves until
             one of them wins or the board is full.
           </>
         ],
         tags: [
-          'Java','IntelliJ Idea'
+          'java','intellij idea'
         ],
         image: {
-          src: '/images/projects/project-01/cover-01.jpg',
+          src: '/images/projects/tic-tac-toe.png',
           alt: 'tic tac toe game img',
           width: 5,
           height: 3
@@ -401,22 +403,22 @@ const about = {
         }
       },
       {
-        name: 'Dictionary App Chrome Extension',
-        timeframe: 'June 2024 - Present',
-        oneliner: 'Dictionary App Chrome Extension',
+        name: 'dictionary app chrome extension',
+        timeframe: 'june 2024 - present',
+        oneliner: 'dictionary app chrome extension',
         description: [
           <>
-            Dictionary App is a Chrome extension that provides quick and easy
-            access to word definitions and synonyms. Enhance your vocabulary and
+            dictionary app is a chrome extension that provides quick and easy
+            access to word definitions and synonyms. enhance your vocabulary and
             understanding directly within your browser.
           </>
         ],
         tags: [
-          'HTML','CSS','Javascript'
+          'html','css','javascript'
         ],
         image: {
-          src: '/images/projects/project-01/cover-01.jpg',
-          alt: 'tic tac toe game img',
+          src: '/images/projects/dictionary.png',
+          alt: 'dictionary app chrome extension img',
           width: 5,
           height: 3
         },
@@ -429,59 +431,59 @@ const about = {
     ],
     ArchiveProjects: [
       {
-        name: 'React ChatGPT Clone',
-        timeframe: 'June 2024 - Present',
-        oneliner: "chat application powered by OpenAI's GPT-3.5",
-        links: [
+        name: 'react chatgpt clone',
+        timeframe: 'june 2024 - present',
+        oneliner: "chat application powered by openai's gpt-3.5",
+        links:
           {
             ext: '',
             github: 'https://github.com/mahendraDew/react-chatGPT-clone'
           }
-        ]
+        
       },
       {
-        name: 'Spotify App clone',
-        timeframe: 'June 2024 - Present',
+        name: 'spotify app clone',
+        timeframe: 'june 2024 - present',
         oneliner:
-          'This is a frontend-only web application that replicates some of the core features of Spotify. It is built using React and utilizes the Spotify API for fetching music data.',
+          'this is a frontend-only web application that replicates some of the core features of Spotify.',
         links: {
           ext: '',
           github: 'https://github.com/mahendraDew/Spotify-clone-app'
         }
       },
       {
-        name: 'Chess game',
-        timeframe: 'June 2024 - Present',
+        name: 'chess game',
+        timeframe: 'june 2024 - present',
         oneliner:
-          'This is a classical chess game build with reactjs, chessboardjsx and chess.js',
+          'this is a classical chess game build with reactjs, chessboardjsx and chess.js',
         links: {
           ext: '',
           github: 'https://github.com/mahendraDew/Chess-Game-React'
         }
       },
       {
-        name: 'Keeper',
-        timeframe: 'June 2024 - Present',
-        oneliner: 'Keeper is an note taking app (Google Keeps Clone).',
+        name: 'keeper',
+        timeframe: 'june 2024 - present',
+        oneliner: 'keeper is an note taking app (google keeps clone).',
         links: {
           ext: '',
           github: 'https://github.com/mahendraDew/Keeper'
         }
       },
       {
-        name: 'QuickNote',
-        timeframe: 'June 2024 - Present',
-        oneliner: 'Note taking chrome extension',
+        name: 'quick note',
+        timeframe: 'june 2024 - present',
+        oneliner: 'note taking chrome extension',
         links: {
           ext: '',
           github: 'https://github.com/mahendraDew/QuickNote-chrome-extension'
         }
       },
       {
-        name: 'Typing test',
-        timeframe: 'June 2024 - Present',
+        name: 'typing test',
+        timeframe: 'june 2024 - present',
         oneliner:
-          'This Python project idea aims to create a fun project that allows you to assess and even enhance your typing speed.',
+          'this python project idea aims to create a fun project that allows you to assess and even enhance your typing speed.',
         links: {
           ext: '',
           github:
@@ -489,9 +491,9 @@ const about = {
         }
       },
       {
-        name: 'Morse Code Translator',
-        timeframe: 'June 2024 - Present',
-        oneliner: 'Morse Code Translator.',
+        name: 'morse code translator',
+        timeframe: 'june 2024 - present',
+        oneliner: 'morse code translator.',
         links: {
           ext: '',
           github:
@@ -502,21 +504,21 @@ const about = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: 'Studies',
+    title: 'education/studies',
     institutions: [
       {
-        name: 'University of Jakarta',
-        description: <>Studied software engineering.</>
+        name: 'buildspace',
+        description: <>buildspace - where you build cool stuff. (learned alot of things can't put here.)</>
       },
       {
-        name: 'Build the Future',
-        description: <>Studied online marketing and personal branding.</>
-      }
+        name: 'viswavidyalaya engineering college',
+        description: <>bachelors in computer science (btech cse)</>
+      },
     ]
   },
   technical: {
     display: true, // set to false to hide this section
-    title: 'Technical skills',
+    title: 'technical skills',
     skills: [
       {
         title: 'Figma',
@@ -571,5 +573,7 @@ const work = {
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 }
+
+
 
 export { person, social, home, about, blog }

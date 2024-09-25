@@ -1,24 +1,15 @@
 import React from 'react'
-
 import {
   Heading,
   Flex,
   Text,
   Button,
-  Avatar,
-  RevealFx, Icon, IconButton, SmartImage, SmartLink, Tag,
+  RevealFx,
+  SmartImage
 } from '@/once-ui/components'
-
-import {
-  about,
-  baseURL,
-  home,
-  person,
-} from '@/app/resources'
-import { MoreBtn } from './components/MoreBtn'
+import { about, baseURL, home, person } from '@/app/resources'
 import Work from './work/work'
 import { Projects } from './project/Projects'
-import { ArchiveProject } from './archive/components/ArchiveProject'
 
 export function generateMetadata () {
   const title = home.title
@@ -54,7 +45,7 @@ export default function Home () {
     <Flex
       maxWidth='s'
       fillWidth
-      gap='xl'
+      gap='l'
       direction='column'
       alignItems='center'
       paddingX='s'
@@ -81,35 +72,38 @@ export default function Home () {
           })
         }}
       />
-      <Flex fillWidth direction='row' paddingY='l' gap='m'>
-        <Flex direction='column' fillWidth maxWidth='s' gap='m'>
-       
+      <Flex fillWidth direction='row' paddingY='l'>
+        <Flex direction='column' fillWidth maxWidth='s' gap='s'>
           <RevealFx translateY='4'>
             <Text
               wrap='balance'
               onBackground='neutral-weak'
               variant='body-default-l'
-              size='m'
-                  >
+              
+            >
               hey, I'm
             </Text>
-            <Heading size='s' wrap='balance' variant='display-strong-s'>
-             {person.name}
+            <Heading  wrap='balance' variant='display-strong-s'>
+              {person.name}
             </Heading>
           </RevealFx>
           <RevealFx translateY='8' delay={0.2}>
-             <Heading  wrap='balance' variant='label-strong-l' onSolid='neutral-weak' style={{color: '#959595'}}>
+            <Heading
+              wrap='balance'
+              variant='label-strong-l'
+              onSolid='neutral-weak'
+              style={{ color: '#959595' }}
+            >
               {home.headline}
             </Heading>
-            
           </RevealFx>
           <RevealFx translateY='8' delay={0.2}>
             <Text
               wrap='balance'
               onBackground='neutral-weak'
-              variant="label-default-m"
-              size='m'
-                  >
+              variant='label-default-m'
+              
+            >
               {home.sublineOne}
             </Text>
           </RevealFx>
@@ -118,8 +112,8 @@ export default function Home () {
               wrap='balance'
               onBackground='neutral-weak'
               variant='label-default-m'
-              size='m'
-                  >
+              
+            >
               {home.sublineTwo}
             </Text>
           </RevealFx>
@@ -128,13 +122,12 @@ export default function Home () {
               wrap='balance'
               onBackground='neutral-weak'
               variant='label-default-m'
-              size='m'
-                  >
+              
+            >
               {home.sublineThree}
             </Text>
-            
           </RevealFx>
-         
+
           <RevealFx translateY='12' delay={0.4}>
             <Button
               data-border='rounded'
@@ -149,47 +142,56 @@ export default function Home () {
             </Button>
           </RevealFx>
         </Flex>
-        
-        <RevealFx translateY='4' style={{width: '50%'}}>
+
+        <RevealFx translateY='4' style={{ width: '50%' }}>
           <Flex
-             paddingBottom="xl" gap="m" paddingLeft='l'
-              flex={3} direction="column" alignItems="center">
-             <SmartImage
+            paddingBottom='xl'
+            gap='m'
+            paddingLeft='l'
+            flex={3}
+            direction='column'
+            alignItems='center'
+          >
+            <SmartImage
               src={person.avatar}
-              alt="Image description"
-              aspectRatio="4/3"
-              radius="l"
-              objectFit="cover"
+              alt='Image description'
+              aspectRatio='4/3'
+              radius='l'
+              objectFit='cover'
             />
           </Flex>
         </RevealFx>
-            {/* <RevealFx
-                    style={{width: '100%'}}
-                    delay={0.4}
-                   
-                    speed="fast">
-                    <SmartImage
-                        tabIndex={0}
-                        radius="l"
-                        alt='Img desc'
-                        aspectRatio="4/3"
-                        src={person.avatar}
-                        objectFit='cover'
-                        />
-                </RevealFx> */}
       </Flex>
+
       <RevealFx translateY='16' delay={0.6}>
         <Work />
-        {/* <Projects range={[1, 1]} /> */}
       </RevealFx>
-      <RevealFx translateY='16' delay={0.6} >
-        {/* <Work /> */}
-        need to add projects here
-        <Flex>
-          <Projects />
-        </Flex>
-        {/* <ArchiveProject /> */}
-      </RevealFx>
+      {/* <RevealFx translateY="16" delay={0.6}> */}
+      <Flex direction='column' gap='s'>
+        <Heading
+          as='h2'
+          id={about.project.title}
+          variant='display-strong-s'
+          marginBottom='m'
+        >
+          {about.project.title.toLowerCase()}
+        </Heading>
+        <Projects />
+        {/* </RevealFx> */}
+        <RevealFx translateY='12' delay={0.4} style={{ paddingLeft:"20px" }}>
+          <Button
+            data-border='rounded'
+            href='/archive'
+            variant='tertiary'
+            suffixIcon='chevronRight'
+            
+          >
+            <Flex gap='8' alignItems='center'>
+              archive
+            </Flex>
+          </Button>
+        </RevealFx>
+      </Flex>
     </Flex>
   )
 }

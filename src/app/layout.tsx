@@ -7,8 +7,9 @@ import { Flex, Background } from '@/once-ui/components'
 import { Footer, Header, RouteGuard } from "@/app/components";
 import { baseURL, effects, home, person, style } from '@/app/resources'
 
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
 import { Source_Code_Pro } from 'next/font/google';
+import { Inter } from "next/font/google";
 
 import React from 'react';
 import localFont from 'next/font/local';
@@ -40,16 +41,21 @@ export const metadata: Metadata = {
 	},
 }
 
-const primary = Inter({
-	variable: '--font-primary',
-	subsets: ['latin'],
-	display: 'swap',
-})
-// const primary = localFont({
-//     src: '../../public/fonts/Manrope-SemiBold.ttf',  // Use .ttf format from the existing font directory
-//     variable: '--font-primary',
-//     weight: '100',
-//   });
+// const primary = Source_Code_Pro({
+// 	variable: '--font-code',
+// 	subsets: ['latin'],
+// 	display: 'swap',
+// })
+// const primary = Inter({
+// 	variable: '--font-primary',
+// 	subsets: ['latin'],
+// 	display: 'swap',
+// })
+const primary = localFont({
+    src: '../../public/fonts/Manrope-SemiBold.ttf',  // Use .ttf format from the existing font directory
+    variable: '--font-primary',
+    // weight: '100',
+  });
 
 
 type FontConfig = {
