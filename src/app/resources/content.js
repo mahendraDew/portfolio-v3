@@ -13,16 +13,7 @@ const person = {
   languages: ['English', 'Hindi'] // optional: Leave the array empty if you don't want to display languages
 }
 
-const newsletter = {
-  display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: (
-    <>
-      I occasionally write about design, technology, and share thoughts on the
-      intersection of creativity and engineering.
-    </>
-  )
-}
+
 
 const social = [
   // Links are automatically displayed.
@@ -66,32 +57,11 @@ const home = {
   ),
   sublineTwo: (
     <>
-      i’m passionate about building cool things and creating projects that push
-      the boundaries of tech{' '}
+      i’m passionate about building cool things{' '}
       <Text onBackground='danger-weak'>
-        (or break them, depending on the day)
+        (or break them, depending on the day )
       </Text>
       .
-    </>
-  ),
-  sublineThree: (
-    <>
-      {' '}
-      in my free time{' '}
-      <Text onBackground='danger-weak'> (which is practically a myth)</Text>, I
-      enjoy working on my side projects. after hours, i like building my own
-      ideas into reality{' '}
-      <Text onBackground='danger-weak'>
-        because, you know, who needs sleep?
-      </Text>{' '}
-      oh, and i also like to do drawing and painting{' '}
-      <Text onBackground='danger-weak'>
-        {' '}
-        (on those rare occasions when I actually have time to breathe!)
-      </Text>
-      .{' '}
-      exploring web3 as of now{':|'}{' '}
-      <MoreBtn />
     </>
   )
 }
@@ -113,8 +83,47 @@ const about = {
   },
   intro: {
     display: true,
-    title: 'introduction'
-    // description: <>Mahendra is a Indian engineer with a passion for transforming complex challenges into simple, elegant design solutions. Her work spans digital interfaces, interactive experiences, and the convergence of design and technology.</>
+    title: 'introduction',
+    sublineOne: (
+      <>
+        hi, i’m Mahendra Dewangan, frontend developer from india. i recently
+        graduated with a bachelors in computer science, specializing in frontend
+        development. i’ve dabbled in both frontend and backend{' '}
+        <Text onBackground='danger-weak'>
+          (because, why not complicate life a little more?)
+        </Text>
+      </>
+    ),
+    sublineTwo: (
+      <>
+        i’m passionate about building cool things and creating projects that push
+        the boundaries of tech{' '}
+        <Text onBackground='danger-weak'>
+          (or break them, depending on the day)
+        </Text>
+        .
+      </>
+    ),
+    sublineThree: (
+      <>
+        {' '}
+        in my free time{' '}
+        <Text onBackground='danger-weak'> (which is practically a myth)</Text>, I
+        enjoy working on my side projects. after hours, i like building my own
+        ideas into reality{' '}
+        <Text onBackground='danger-weak'>
+          because, you know, who needs sleep?
+        </Text>{' '}
+      </>,<>  
+        oh, and i also like to do drawing and painting{' '}
+        <Text onBackground='danger-weak'>
+          {' '}
+          (on those rare occasions when I actually have time to breathe!)
+        </Text>
+        .{' '}
+        exploring web3 as of now{' :)'}{' '}
+      </>
+    )
   },
   work: {
     display: true, // set to false to hide this section
@@ -508,11 +517,19 @@ const about = {
     institutions: [
       {
         name: 'buildspace',
-        description: <>buildspace - where you build cool stuff. (learned alot of things can't put here.)</>
+        description: <>buildspace - where you build cool stuff. (learned alot of things can't put here.)</>,
+        image: {
+          src:"/images/studies/buildspace.png",
+          alt: "buildspace",
+        }
       },
       {
         name: 'viswavidyalaya engineering college',
-        description: <>bachelors in computer science (btech cse)</>
+        description: <>bachelors in computer science (btech cse)</>,
+        image: {
+          src:"/images/studies/vec.png",
+          alt: "VEC College",
+        }
       },
     ]
   },

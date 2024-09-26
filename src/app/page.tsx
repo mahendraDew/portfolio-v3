@@ -10,6 +10,7 @@ import {
 import { about, baseURL, home, person } from '@/app/resources'
 import Work from './work/work'
 import { Projects } from './project/Projects'
+import { MoreBtn } from './components/MoreBtn'
 
 export function generateMetadata () {
   const title = home.title
@@ -116,17 +117,9 @@ export default function Home () {
             >
               {home.sublineTwo}
             </Text>
+            <MoreBtn />
           </RevealFx>
-          <RevealFx translateY='8' delay={0.2}>
-            <Text
-              wrap='balance'
-              onBackground='neutral-weak'
-              variant='label-default-m'
-              
-            >
-              {home.sublineThree}
-            </Text>
-          </RevealFx>
+          
 
           <RevealFx translateY='12' delay={0.4}>
             <Button
