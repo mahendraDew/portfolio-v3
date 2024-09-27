@@ -7,11 +7,6 @@ const routes = {
     '/archive':    true
 }
 
-// Enable password protection on selected routes
-// Set password in pages/api/authenticate.ts
-const protectedRoutes = {
-    
-}
 
 const effects = {
     gradient: false,
@@ -36,13 +31,5 @@ const display = {
     time:     false
 }
 
-// const mailchimp = {
-//     action: 'https://url/subscribe/post?parameters',
-//     effects: {
-//         gradient: false,
-//         dots:     false,
-//         lines:    true,
-//     }
-// }
 
-export { routes, protectedRoutes, effects, style, display, baseURL };
+export { routes, effects, style, display, baseURL };

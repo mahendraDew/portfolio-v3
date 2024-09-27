@@ -84,7 +84,7 @@ export const Footer = () => {
                         © {currentYear} /
                     </Text>
                     <Text paddingX="4">
-                        <a href="https://twitter.com/mahendradew">
+                        <a href="https://x.com/mahendra_Dew">
                          {person.name}
                         </a>
                     </Text>

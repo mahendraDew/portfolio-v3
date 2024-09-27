@@ -4,7 +4,8 @@ import "./globals.css";
 import classNames from 'classnames';
 
 import { Flex, Background } from '@/once-ui/components'
-import { Footer, Header, RouteGuard } from "@/app/components";
+// import { Footer, Header, RouteGuard } from "@/app/components";
+import { Footer, Header } from "@/app/components";
 import { baseURL, effects, home, person, style } from '@/app/resources'
 
 // import { Inter } from "next/font/google";
@@ -135,9 +136,9 @@ export default function RootLayout({ children } : RootLayoutProps) {
 					<Flex
 						justifyContent="center"
 						fillWidth minHeight="0">
-						<RouteGuard>
+						{/* <RouteGuard> */}
 							{children}
-						</RouteGuard>
+						{/* </RouteGuard> */}
 					</Flex>
 				</Flex>
 				<Footer/>

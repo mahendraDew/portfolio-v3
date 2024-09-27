@@ -1,5 +1,4 @@
-import { InlineCode, Text } from '@/once-ui/components'
-import { MoreBtn } from '../components/MoreBtn'
+import { Text } from '@/once-ui/components'
 
 const person = {
   firstName: 'Mahendra',
@@ -21,7 +20,7 @@ const social = [
   {
     name: 'X',
     icon: 'x',
-    link: 'https://twitter.com/mahendra_dew'
+    link: 'https://x.com/mahendra_Dew'
   },
   {
     name: 'GitHub',
