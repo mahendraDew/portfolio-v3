@@ -160,15 +160,15 @@ export default function Home () {
         <Work />
       </RevealFx>
       {/* <RevealFx translateY="16" delay={0.6}> */}
-      <Flex direction='column' gap='s'>
-        <Heading
-          as='h2'
-          id={about.project.title}
-          variant='display-strong-s'
-          marginBottom='m'
-        >
-          {about.project.title.toLowerCase()}
-        </Heading>
+      <Flex fillWidth maxWidth="m"  direction='column' gap='s'>
+          <Heading
+            as='h2'
+            id={about.project.title}
+            variant='display-strong-s'
+            marginBottom='m'
+            >
+            {about.project.title.toLowerCase()}
+          </Heading>
         <Projects />
         {/* </RevealFx> */}
         <RevealFx translateY='12' delay={0.4} style={{ paddingLeft:"20px" }}>

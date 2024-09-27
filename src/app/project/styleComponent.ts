@@ -64,7 +64,7 @@ export const Card = styled(motion.div)`
 
   @media (max-width: 480px) {
     max-width: 90%;
-    max-height: 50%;
+    max-height: 70%;
   }
 `;
 
@@ -128,6 +128,10 @@ export const CardList = styled.ul`
   padding: 0 20px;
   flex-direction: column;
   gap: 1rem;
+  
+  @media (max-width: 600px) {
+    padding: 0;
+  }
 `;
 
 export const CardItem = styled(motion.div)`
