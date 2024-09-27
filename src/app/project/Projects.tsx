@@ -4,7 +4,7 @@ import React, { useEffect, useId, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useOutsideClick } from '../components/hooks/use-outside-click'
 import { about } from '@/app/resources'
-import { Flex, IconButton, Tooltip } from '@/once-ui/components'
+import { Flex, IconButton, Text, Tooltip } from '@/once-ui/components'
 
 // Import styled components
 import {
@@ -164,7 +164,12 @@ export function Projects () {
                 <CardDescription
                   layoutId={`description-${project.oneliner}-${id}`}
                 >
+                  <Text  wrap='balance'
+              onBackground='neutral-weak'
+              variant='label-default-m'>
                   {project.oneliner}
+
+                  </Text>
                 </CardDescription>
               </div>
             </div>

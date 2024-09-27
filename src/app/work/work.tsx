@@ -52,7 +52,7 @@ export default function Work () {
                     <Text
                       as='li'
                       onBackground='neutral-weak'
-              variant='label-default-m'
+                      variant='label-default-m'
                       key={`${experience.company}-${index}`}
                     >
                       {achievement}

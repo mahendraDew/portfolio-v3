@@ -153,7 +153,7 @@ const about = {
             and usability of the web application.
           </>,
           <>
-            skills and technologies: javascript/typescript, react.js, nextjs,
+            skills and technologies: javascript/typescript, react.js, next.js,
             node.js, api, tailwindcss, chromeapis.
           </>
         ]
@@ -178,11 +178,11 @@ const about = {
           </>
         ],
         tags: [
-          'nextjs',
+          'next.js',
           'js',
           'typescript',
           'tailwind',
-          'nodejs',
+          'node.js',
           'docker',
           'drizzle',
           'postgreSQL',
@@ -280,7 +280,7 @@ const about = {
         ],
         tags: [
           'javascript',
-          'reactjs',
+          'react.js',
           'apis',
           'rapidapi',
           'axios',
@@ -343,9 +343,9 @@ const about = {
         tags: [
           
           'javascript',
-          'reactjs',
+          'react.js',
           'tailwindcss',
-          'Nodejs',
+          'node.js',
           'firebase-auth',
           'unsplash',
         ],
@@ -366,14 +366,14 @@ const about = {
         oneliner: 'an image generator app using',
         description: [
           <>
-            an image generator app using reactJS, inspired by dall-e, to create
+            an image generator app using react.js, inspired by dall-e, to create
             unique images based on text prompts. Explore endless creative
             possibilities with advanced ai-driven image generation.
           </>
         ],
         tags: [
           'javascript',
-          'Nodejs','reactjs','dalle api'
+          'node.js','react.js','dalle api'
         ],
         image: {
           src: '/images/projects/dalle-clone.png',
@@ -464,7 +464,7 @@ const about = {
         name: 'chess game',
         timeframe: 'june 2024 - present',
         oneliner:
-          'this is a classical chess game build with reactjs, chessboardjsx and chess.js',
+          'this is a classical chess game build with react.js, chessboard.jsx and chess.js',
         links: {
           ext: '',
           github: 'https://github.com/mahendraDew/Chess-Game-React'
@@ -525,7 +525,7 @@ const about = {
       },
       {
         name: 'viswavidyalaya engineering college',
-        description: <>bachelors in computer science (btech cse)</>,
+        description: <>bachelor of technology in computer science </>,
         image: {
           src:"/images/studies/vec.png",
           alt: "VEC College",
@@ -590,7 +590,15 @@ const work = {
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 }
+const getUniqueTags = () => {
+  // Collect all tags from each project
+  const allTags = about.project.mainProjects.flatMap(project => project.tags);
+  
+  // Remove duplicates by creating a Set
+  const uniqueTags = [...new Set(allTags)];
+
+  return uniqueTags;
+};
 
 
-
-export { person, social, home, about, blog }
+export { person, social, home, about, blog, getUniqueTags }

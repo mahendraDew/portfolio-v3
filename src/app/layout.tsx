@@ -51,11 +51,29 @@ export const metadata: Metadata = {
 // 	subsets: ['latin'],
 // 	display: 'swap',
 // })
-const primary = localFont({
-    src: '../../public/fonts/Manrope-SemiBold.ttf',  // Use .ttf format from the existing font directory
+// const primary = localFont({
+//     src: '../../public/fonts/Manrope-SemiBold.ttf',  // Use .ttf format from the existing font directory
+//     variable: '--font-primary',
+//     // weight: '100',
+//   });
+
+
+// import { Inter } from 'next/font/google';
+import { Manrope } from 'next/font/google';
+
+const primary = Inter({
     variable: '--font-primary',
-    // weight: '100',
-  });
+    subsets: ['latin'],
+    display: 'swap'
+});
+
+// const tertiary = Manrope({
+//     variable: '--font-tertiary',
+//     subsets: ['latin'],
+//     display: 'swap'
+// });
+
+
 
 
 type FontConfig = {
