@@ -194,7 +194,7 @@ const about = {
           height: 3
         },
         links: {
-          ext: 'https://devspace-prod.vercel.app/',
+          ext: 'https://devspaceorg.vercel.app/',
           github: 'https://github.com/mahendraDew/devspace'
         }
       },
