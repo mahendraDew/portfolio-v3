@@ -5,12 +5,16 @@ import {
   Text,
   Button,
   RevealFx,
-  SmartImage
+  SmartImage,
+  Avatar
 } from '@/once-ui/components'
 import { about, baseURL, home, person } from '@/app/resources'
 import Work from './work/work'
 import { Projects } from './project/Projects'
 import { MoreBtn } from './components/MoreBtn'
+
+import styles from '@/app/page.module.scss'
+
 
 export function generateMetadata () {
   const title = home.title
@@ -73,8 +77,26 @@ export default function Home () {
           })
         }}
       />
-      <Flex fillWidth direction='row' paddingY='l'>
-        <Flex direction='column' fillWidth maxWidth='s' gap='s'>
+      <Flex fillWidth direction='column' gap='s'>
+        <Flex gap='s' paddingLeft='s' className={styles.displayflex} >
+          <RevealFx translateY='4' className={styles.width}>
+            <Flex
+             alignItems="center"
+              justifyContent="center"
+              onBackground="brand-strong"
+              paddingTop='4'
+            >
+              <SmartImage
+                src={person.avatar}
+                alt='Image description'
+                aspectRatio='1/1'
+                radius='m'
+                // objectFit='cover'
+                style={{borderRadius: "50%"}}
+              
+              />
+            </Flex>
+          </RevealFx>
           <RevealFx translateY='4'>
             <Text
               wrap='balance'
@@ -87,8 +109,6 @@ export default function Home () {
             <Heading  wrap='balance' variant='display-strong-s'>
               {person.name}
             </Heading>
-          </RevealFx>
-          <RevealFx translateY='8' delay={0.2}>
             <Heading
               wrap='balance'
               variant='label-strong-l'
@@ -98,6 +118,11 @@ export default function Home () {
               {home.headline}
             </Heading>
           </RevealFx>
+          {/* <RevealFx translateY='8' delay={0.2}>
+          </RevealFx> */}
+
+        </Flex>
+        <Flex direction='column' fillWidth maxWidth='s' gap='s' paddingX='s'>
           <RevealFx translateY='8' delay={0.2}>
             <Text
               wrap='balance'
@@ -124,7 +149,7 @@ export default function Home () {
           <RevealFx translateY='12' delay={0.4}>
             <Button
               data-border='rounded'
-              href='https://drive.google.com/file/d/1U5olv_D70vkZmJllOu_cXQFgHzfq3VJo/view?usp=sharing'
+              href='https://drive.google.com/file/d/1Gs-b4C-u5huT79_Dh25i0K7owEyGRDu4/view?usp=sharing'
               variant='tertiary'
               suffixIcon='chevronRight'
               size='m'
@@ -136,7 +161,7 @@ export default function Home () {
           </RevealFx>
         </Flex>
 
-        <RevealFx translateY='4' style={{ width: '50%' }}>
+        {/* <RevealFx translateY='4' style={{ width: '50%' }}>
           <Flex
             paddingBottom='xl'
             gap='m'
@@ -153,7 +178,7 @@ export default function Home () {
               objectFit='cover'
             />
           </Flex>
-        </RevealFx>
+        </RevealFx> */}
       </Flex>
 
       <RevealFx translateY='16' delay={0.6}>

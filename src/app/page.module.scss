@@ -1,0 +1,19 @@
+.displayflex{
+    flex-direction: row;
+}
+.width{
+    width: 12%;
+}
+@media (max-width:494px) {
+    .width{
+        width: 100%;
+    }
+    .displayflex {
+        flex-direction: column;
+    }
+}
+@media (max-width:769px) {
+    .width {
+        width: 15%;
+    }
+}

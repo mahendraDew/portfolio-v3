@@ -46,7 +46,7 @@ const home = {
   headline: <>Engineer, Freelancer, Builder</>,
   sublineOne: (
     <>
-      hi, i’m Mahendra Dewangan, frontend developer from india. i recently
+      hi, i’m Mahendra Dewangan, full stack developer from india. i recently
       graduated with a bachelors in computer science, specializing in frontend
       development. i’ve dabbled in both frontend and backend{' '}
       <Text onBackground='danger-weak'>
@@ -58,7 +58,7 @@ const home = {
     <>
       i’m passionate about building cool things{' '}
       <Text onBackground='danger-weak'>
-        (or break them, depending on the day )
+        (or break them, depending on the day)
       </Text>
       .
     </>
@@ -164,6 +164,39 @@ const about = {
     title: 'projects',
     mainProjects: [
       {
+        name: 'secondbrain',
+        timeframe: 'nov 2024 - present',
+        oneliner:
+          'your digital brain for storing, organizing, and effortlessly retrieving your thoughts and ideas.',
+        description: [
+          <>
+           secondbrain is your personal knowledge hub designed to capture and organize your thoughts, ideas, and insights. store everything—from a simple tweet to a youtube video or a detailed blog article—all in one place. effortlessly retrieve information, simplify your workflow, and unlock your creative potential. never forget your 'thought' again!
+          </>
+        ],
+        tags: [
+          'react.js',
+          'js',
+          'typescript',
+          'tailwind',
+          'node.js',
+          'express',
+          'mongodb',
+          'jwt',
+          'mongoose',
+          'oauth'
+        ],
+        image: {
+          src: '/images/projects/secondbrain.png',
+          alt: 'secondbrain img',
+          width: 5,
+          height: 3
+        },
+        links: {
+          ext: 'https://getsecondbrain.vercel.app/',
+          github: 'https://github.com/mahendraDew/secondbrain-client'
+        }
+      },
+      {
         name: 'devspace',
         timeframe: 'june 2024 - present',
         oneliner:
@@ -199,39 +232,36 @@ const about = {
         }
       },
       {
-        name: 'moodify',
-        timeframe: 'june 2024 - present',
+        name: 'ya todo',
+        timeframe: 'may 2024 - present',
         oneliner:
-          'music recommendation system(web app) based on facial expression(emotion)',
+          'ya-todo: yet another to-do app because who doesnt need more lists in their life?',
         description: [
           <>
-            moodify is a music recommendation web app that uses facial emotion
-            recognition to suggest songs. capture your mood through the camera,
-            and Moodify will curate a personalized playlist to match your
-            emotional state, enhancing your music experience.
+            ya-todo: the simple to-do app that helps you organize your tasks, track your goals, and keep your life together—because apparently, we all need another list to manage.
           </>
         ],
         tags: [
-          'html/css',
-          'javascript',
-          'python',
-          'flask',
-          'openCV',
-          'haarcascade classifier',
-          'fer 2013',
-          'firebase'
+          'react.js',
+          'js',
+          'tailwind',
+          'node.js',
+          'mongodb',
+          'express',
+          'jwt',
         ],
         image: {
-          src: '/images/projects/moodify.png',
-          alt: 'moodify img',
+          src: '/images/projects/yatodo.png',
+          alt: 'ya-todo img',
           width: 5,
           height: 3
         },
         links: {
-          ext: '',
-          github: ''
+          ext: 'https://yetanothertodo.vercel.app/',
+          github: 'https://github.com/mahendraDew/ya-todo-client'
         }
       },
+     
       {
         name: 'deploycell - vercel clone',
         timeframe: 'june 2024 - present',
@@ -264,63 +294,6 @@ const about = {
         links: {
           ext: '',
           github: 'https://github.com/mahendraDew/Deploycell-vercel-clone'
-        }
-      },
-      {
-        name: 'recify - spotify clone',
-        timeframe: 'june 2024 - present',
-        oneliner: 'music screaming platform using spotify api',
-        description: [
-          <>
-            recify is a spotify clone web app offering seamless music streaming.
-            enjoy high-quality audio, create custom playlists, and discover new
-            music based on your with an intuitive interface and robust features.
-          </>
-        ],
-        tags: [
-          'javascript',
-          'react.js',
-          'apis',
-          'rapidapi',
-          'axios',
-          'redux',
-        ],
-        image: {
-          src: '/images/projects/recify.png',
-          alt: 'moodify img',
-          width: 5,
-          height: 3
-        },
-        links: {
-          ext: '',
-          github: 'https://github.com/mahendraDew/Recify-react-app'
-        }
-      },
-      {
-        name: 'face recognition system using opencv',
-        timeframe: 'june 2024 - present',
-        oneliner: 'simple face recognition system',
-        description: [
-          <>
-            this is a simple face recognition system implemented using the
-            opencv library in python. the project involves capturing and saving
-            face images, training a face recognition model, and performing
-            recognition tasks.
-          </>
-        ],
-        tags: [
-          'python',
-          'OpenCV','numpy'
-        ],
-        image: {
-          src: '/images/projects/project-01/cover.jpg',
-          alt: 'face recognition img',
-          width: 5,
-          height: 3
-        },
-        links: {
-          ext: '',
-          github: 'https://github.com/mahendraDew/Face-detection-project'
         }
       },
       {
@@ -359,85 +332,75 @@ const about = {
           github: 'https://github.com/mahendraDew/HNG-stage-three'
         }
       },
+      
+    ],
+    ArchiveProjects: [
+      {
+        name: 'moodify',
+        timeframe: 'june 2024 - present',
+        oneliner: "music recommendation system(web app) based on facial expression(emotion)",
+        links:
+          {
+            ext: '',
+            github: 'https://github.com/mahendraDew/real-time-emotion-based-music-recommendation-system'
+          }
+        
+      },
+      {
+        name: 'recify - spotify clone',
+        timeframe: 'june 2024 - present',
+        oneliner: "music screaming platform using spotify api",
+        links:
+          {
+            ext: '',
+            github: 'https://github.com/mahendraDew/Recify-react-app'
+          }
+        
+      },
+      {
+        name: 'face recognition system using opencv',
+        timeframe: 'june 2024 - present',
+        oneliner: "simple face recognition system",
+        links:
+          {
+            ext: '',
+            github: 'https://github.com/mahendraDew/Face-detection-project'
+          }
+        
+      },
       {
         name: 'react dalle clone',
         timeframe: 'june 2024 - present',
-        oneliner: 'an image generator app using',
-        description: [
-          <>
-            an image generator app using react.js, inspired by dall-e, to create
-            unique images based on text prompts. Explore endless creative
-            possibilities with advanced ai-driven image generation.
-          </>
-        ],
-        tags: [
-          'javascript',
-          'node.js','react.js','dalle api'
-        ],
-        image: {
-          src: '/images/projects/dalle-clone.png',
-          alt: 'react dalle clone img',
-          width: 5,
-          height: 3
-        },
-        links: {
-          ext: '',
-          github: 'https://github.com/mahendraDew/react-dallE-clone'
-        }
+        oneliner: "an image generator app using dalle api",
+        links:
+          {
+            ext: '',
+            github: 'https://github.com/mahendraDew/react-dallE-clone'
+          }
+        
       },
       {
         name: 'tic tac toe - java cli app',
         timeframe: 'june 2024 - present',
-        oneliner: 'console-based tic-tac-toe game',
-        description: [
-          <>
-            this is a simple console-based Tic Tac Toe game implemented in Java.
-            the game allows two players to take turns entering their moves until
-            one of them wins or the board is full.
-          </>
-        ],
-        tags: [
-          'java','intellij idea'
-        ],
-        image: {
-          src: '/images/projects/tic-tac-toe.png',
-          alt: 'tic tac toe game img',
-          width: 5,
-          height: 3
-        },
-        links: {
-          ext: '',
-          github: 'https://github.com/mahendraDew/TicTacToe_Java'
-        }
+        oneliner: "console-based tic-tac-toe game",
+        links:
+          {
+            ext: '',
+            github: 'https://github.com/mahendraDew/TicTacToe_Java'
+          }
+        
       },
       {
         name: 'dictionary app chrome extension',
         timeframe: 'june 2024 - present',
-        oneliner: 'dictionary app chrome extension',
-        description: [
-          <>
-            dictionary app is a chrome extension that provides quick and easy
-            access to word definitions and synonyms. enhance your vocabulary and
-            understanding directly within your browser.
-          </>
-        ],
-        tags: [
-          'html','css','javascript'
-        ],
-        image: {
-          src: '/images/projects/dictionary.png',
-          alt: 'dictionary app chrome extension img',
-          width: 5,
-          height: 3
-        },
-        links: {
-          ext: '',
-          github:
-            'https://github.com/mahendraDew/Dictionary_App_Chrome_extension'
-        }
-      }
-    ],
-    ArchiveProjects: [
+        oneliner: "dictionary app chrome extension",
+        links:
+          {
+            ext: '',
+            github: 'https://github.com/mahendraDew/Dictionary_App_Chrome_extension'
+          }
+        
+      },
       {
         name: 'react chatgpt clone',
         timeframe: 'june 2024 - present',
