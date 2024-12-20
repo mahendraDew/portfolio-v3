@@ -12,8 +12,6 @@ const person = {
   languages: ['English', 'Hindi'] // optional: Leave the array empty if you don't want to display languages
 }
 
-
-
 const social = [
   // Links are automatically displayed.
   // Import new icons in /once-ui/icons.ts
@@ -95,34 +93,37 @@ const about = {
     ),
     sublineTwo: (
       <>
-        i’m passionate about building cool things and creating projects that push
-        the boundaries of tech{' '}
+        i’m passionate about building cool things and creating projects that
+        push the boundaries of tech{' '}
         <Text onBackground='danger-weak'>
           (or break them, depending on the day)
         </Text>
         .
       </>
     ),
-    sublineThree: (
-      <>
-        {' '}
-        in my free time{' '}
-        <Text onBackground='danger-weak'> (which is practically a myth)</Text>, I
-        enjoy working on my side projects. after hours, i like building my own
-        ideas into reality{' '}
-        <Text onBackground='danger-weak'>
-          because, you know, who needs sleep?
-        </Text>{' '}
-      </>,<>  
-        oh, and i also like to do drawing and painting{' '}
-        <Text onBackground='danger-weak'>
+    sublineThree:
+      ((
+        <>
           {' '}
-          (on those rare occasions when I actually have time to breathe!)
-        </Text>
-        .{' '}
-        exploring web3 as of now{' :)'}{' '}
-      </>
-    )
+          in my free time{' '}
+          <Text onBackground='danger-weak'> (which is practically a myth)</Text>
+          , I enjoy working on my side projects. after hours, i like building my
+          own ideas into reality{' '}
+          <Text onBackground='danger-weak'>
+            because, you know, who needs sleep?
+          </Text>{' '}
+        </>
+      ),
+      (
+        <>
+          oh, and i also like to do drawing and painting{' '}
+          <Text onBackground='danger-weak'>
+            {' '}
+            (on those rare occasions when I actually have time to breathe!)
+          </Text>
+          . exploring web3 as of now{' :)'}{' '}
+        </>
+      ))
   },
   work: {
     display: true, // set to false to hide this section
@@ -164,13 +165,50 @@ const about = {
     title: 'projects',
     mainProjects: [
       {
+        name: 'bytecode ui',
+        timeframe: 'dec 2024 - present',
+        oneliner:
+          'a collection of minimalist/modern ui component and template for react/nextjs apps',
+        description: [
+          <>
+            the bytecode ui library is designed to simplify the process of
+            creating beautiful and consistent user interfaces. with a focus on
+            flexibility and ease of use, our components are built to seamlessly
+            integrate into any project, leveraging the power of aceternity ui
+            and shadcn. build on top of aceternity ui and schadcn ui.
+          </>
+        ],
+        tags: [
+          'next.js',
+          'js',
+          'typescript',
+          'tailwind',
+          'node.js',
+        ],
+        image: {
+          src: '/images/projects/bytecodeui.png',
+          alt: 'bytecodeui img',
+          width: 5,
+          height: 3
+        },
+        links: {
+          ext: 'https://bytecodeui.vercel.app/',
+          github: 'https://github.com/mahendraDew/bytecodeui'
+        }
+      },
+      {
         name: 'secondbrain',
         timeframe: 'nov 2024 - present',
         oneliner:
           'your digital brain for storing, organizing, and effortlessly retrieving your thoughts and ideas.',
         description: [
           <>
-           secondbrain is your personal knowledge hub designed to capture and organize your thoughts, ideas, and insights. store everything—from a simple tweet to a youtube video or a detailed blog article—all in one place. effortlessly retrieve information, simplify your workflow, and unlock your creative potential. never forget your 'thought' again!
+            secondbrain is your personal knowledge hub designed to capture and
+            organize your thoughts, ideas, and insights. store everything—from a
+            simple tweet to a youtube video or a detailed blog article—all in
+            one place. effortlessly retrieve information, simplify your
+            workflow, and unlock your creative potential. never forget your
+            'thought' again!
           </>
         ],
         tags: [
@@ -238,7 +276,9 @@ const about = {
           'ya-todo: yet another to-do app because who doesnt need more lists in their life?',
         description: [
           <>
-            ya-todo: the simple to-do app that helps you organize your tasks, track your goals, and keep your life together—because apparently, we all need another list to manage.
+            ya-todo: the simple to-do app that helps you organize your tasks,
+            track your goals, and keep your life together—because apparently, we
+            all need another list to manage.
           </>
         ],
         tags: [
@@ -248,7 +288,7 @@ const about = {
           'node.js',
           'mongodb',
           'express',
-          'jwt',
+          'jwt'
         ],
         image: {
           src: '/images/projects/yatodo.png',
@@ -261,7 +301,7 @@ const about = {
           github: 'https://github.com/mahendraDew/ya-todo-client'
         }
       },
-     
+
       {
         name: 'deploycell - vercel clone',
         timeframe: 'june 2024 - present',
@@ -283,7 +323,7 @@ const about = {
           'node.js',
           'express',
           'redis DB',
-          'azure Containers',
+          'azure Containers'
         ],
         image: {
           src: '/images/projects/deploycell.png',
@@ -313,13 +353,12 @@ const about = {
           <> username: user@example.com, password: 1Password</>
         ],
         tags: [
-          
           'javascript',
           'react.js',
           'tailwindcss',
           'node.js',
           'firebase-auth',
-          'unsplash',
+          'unsplash'
         ],
         image: {
           src: '/images/projects/image-gallery.png',
@@ -331,86 +370,74 @@ const about = {
           ext: 'https://hng-stage-three-image-gallery.vercel.app/',
           github: 'https://github.com/mahendraDew/HNG-stage-three'
         }
-      },
-      
+      }
     ],
     ArchiveProjects: [
       {
         name: 'moodify',
         timeframe: 'june 2024 - present',
-        oneliner: "music recommendation system(web app) based on facial expression(emotion)",
-        links:
-          {
-            ext: '',
-            github: 'https://github.com/mahendraDew/real-time-emotion-based-music-recommendation-system'
-          }
-        
+        oneliner:
+          'music recommendation system(web app) based on facial expression(emotion)',
+        links: {
+          ext: '',
+          github:
+            'https://github.com/mahendraDew/real-time-emotion-based-music-recommendation-system'
+        }
       },
       {
         name: 'recify - spotify clone',
         timeframe: 'june 2024 - present',
-        oneliner: "music screaming platform using spotify api",
-        links:
-          {
-            ext: '',
-            github: 'https://github.com/mahendraDew/Recify-react-app'
-          }
-        
+        oneliner: 'music screaming platform using spotify api',
+        links: {
+          ext: '',
+          github: 'https://github.com/mahendraDew/Recify-react-app'
+        }
       },
       {
         name: 'face recognition system using opencv',
         timeframe: 'june 2024 - present',
-        oneliner: "simple face recognition system",
-        links:
-          {
-            ext: '',
-            github: 'https://github.com/mahendraDew/Face-detection-project'
-          }
-        
+        oneliner: 'simple face recognition system',
+        links: {
+          ext: '',
+          github: 'https://github.com/mahendraDew/Face-detection-project'
+        }
       },
       {
         name: 'react dalle clone',
         timeframe: 'june 2024 - present',
-        oneliner: "an image generator app using dalle api",
-        links:
-          {
-            ext: '',
-            github: 'https://github.com/mahendraDew/react-dallE-clone'
-          }
-        
+        oneliner: 'an image generator app using dalle api',
+        links: {
+          ext: '',
+          github: 'https://github.com/mahendraDew/react-dallE-clone'
+        }
       },
       {
         name: 'tic tac toe - java cli app',
         timeframe: 'june 2024 - present',
-        oneliner: "console-based tic-tac-toe game",
-        links:
-          {
-            ext: '',
-            github: 'https://github.com/mahendraDew/TicTacToe_Java'
-          }
-        
+        oneliner: 'console-based tic-tac-toe game',
+        links: {
+          ext: '',
+          github: 'https://github.com/mahendraDew/TicTacToe_Java'
+        }
       },
       {
         name: 'dictionary app chrome extension',
         timeframe: 'june 2024 - present',
-        oneliner: "dictionary app chrome extension",
-        links:
-          {
-            ext: '',
-            github: 'https://github.com/mahendraDew/Dictionary_App_Chrome_extension'
-          }
-        
+        oneliner: 'dictionary app chrome extension',
+        links: {
+          ext: '',
+          github:
+            'https://github.com/mahendraDew/Dictionary_App_Chrome_extension'
+        }
       },
       {
         name: 'react chatgpt clone',
         timeframe: 'june 2024 - present',
         oneliner: "chat application powered by openai's gpt-3.5",
-        links:
-          {
-            ext: '',
-            github: 'https://github.com/mahendraDew/react-chatGPT-clone'
-          }
-        
+        links: {
+          ext: '',
+          github: 'https://github.com/mahendraDew/react-chatGPT-clone'
+        }
       },
       {
         name: 'spotify app clone',
@@ -479,20 +506,25 @@ const about = {
     institutions: [
       {
         name: 'buildspace',
-        description: <>buildspace - where you build cool stuff. (learned alot of things can't put here.)</>,
+        description: (
+          <>
+            buildspace - where you build cool stuff. (learned alot of things
+            can't put here.)
+          </>
+        ),
         image: {
-          src:"/images/studies/buildspace.png",
-          alt: "buildspace",
+          src: '/images/studies/buildspace.png',
+          alt: 'buildspace'
         }
       },
       {
         name: 'viswavidyalaya engineering college',
         description: <>bachelor of technology in computer science </>,
         image: {
-          src:"/images/studies/vec.png",
-          alt: "VEC College",
+          src: '/images/studies/vec.png',
+          alt: 'VEC College'
         }
-      },
+      }
     ]
   },
   technical: {
@@ -554,13 +586,12 @@ const work = {
 }
 const getUniqueTags = () => {
   // Collect all tags from each project
-  const allTags = about.project.mainProjects.flatMap(project => project.tags);
-  
+  const allTags = about.project.mainProjects.flatMap(project => project.tags)
+
   // Remove duplicates by creating a Set
-  const uniqueTags = [...new Set(allTags)];
+  const uniqueTags = [...new Set(allTags)]
 
-  return uniqueTags;
-};
-
+  return uniqueTags
+}
 
 export { person, social, home, about, blog, getUniqueTags }
